@@ -344,16 +344,16 @@ const TableContainer = ({
     }, 2000);
   }, []);
 
-  useEffect(() => {
-    let filterData = data;
-    setTabledata(
-      data?.filter((i) => {
-        i.regId.includes(filters?.regId);
-      })
-    );
+  //   useEffect(() => {
+  //     let filterData = data;
+  //     setTabledata(
+  //       data?.filter((i) => {
+  //         i.regId.includes(filters?.regId);
+  //       })
+  //     );
 
-    setTabledata();
-  }, [filters]);
+  //     setTabledata();
+  //   }, [filters]);
   const theme = createMuiTheme({
     overrides: {
       MuiFilledInput: {
