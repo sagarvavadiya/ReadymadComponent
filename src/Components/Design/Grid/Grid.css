@@ -1,0 +1,20 @@
+.element {
+  width: fit-content;
+  padding: 2px 8px;
+  background-color: aquamarine;
+  border-radius: 12px;
+}
+.elementBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.element2 {
+  width: 20vw;
+  background-color: rgb(150, 127, 255);
+  border-radius: 12px;
+  aspect-ratio: 1;
+}

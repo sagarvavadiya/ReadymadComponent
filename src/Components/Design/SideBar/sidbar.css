@@ -1,0 +1,15 @@
+.manuTitle {
+  width: 7rem;
+  border: black solid 3px;
+  cursor: pointer;
+}
+.manuBox,
+.submanuBox {
+  display: flex;
+  justify-content: space-between;
+}
+.submanuTitle {
+  width: 10rem;
+  border: rgb(155, 13, 13) solid 1px;
+  cursor: pointer;
+}
