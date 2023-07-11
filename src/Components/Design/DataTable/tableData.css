@@ -1,0 +1,12 @@
+.react-datepicker__input-container input{
+    width: 100% !important; 
+    border: none !important;
+    border-bottom: 1px solid !important;
+}
+.react-datepicker__input-container input:focus-visible{
+   outline: none !important;
+}
+.filterIcon{
+    border: none;
+    background-color: #008b8b00;
+}
