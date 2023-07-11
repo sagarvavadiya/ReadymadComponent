@@ -7,7 +7,7 @@ const TestComponent = () => {
     setValue(Number(localStorage.getItem("test")) + 1);
     console.log(localStorage.getItem("test"));
   }, [window.localStorage.getItem("test")]);
-
+  console.log("1");
   return (
     <>
       <div>TestComponent</div>
