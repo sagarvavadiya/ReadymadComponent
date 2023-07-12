@@ -1,15 +1,35 @@
 .manuTitle {
   width: 7rem;
-  border: black solid 3px;
+  border: black solid 1px;
   cursor: pointer;
+  border-radius: 7px;
 }
 .manuBox,
 .submanuBox {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .submanuTitle {
   width: 10rem;
   border: rgb(155, 13, 13) solid 1px;
   cursor: pointer;
+}
+.submanuChildTitle {
+  width: 12rem;
+  border: rgb(56, 13, 155) solid 1px;
+  cursor: pointer;
+}
+.rotate{
+  transform: rotate(90deg) !important;
+    width: 39px !important;
+    background-color:#198754 !important;
+    color: aliceblue !important;
+}
+
+.rotateSubmanu{
+  transform: rotate(90deg) !important;
+    width: 39px !important;
+    background-color:#dc3545 !important;
+    color: aliceblue !important;
 }
