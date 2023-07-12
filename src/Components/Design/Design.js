@@ -10,6 +10,7 @@ import ReactDesignComponent from "./ReactDesign";
 import AllRegulations from "../Design/DataTable/ReactDataTable";
 import { Link } from "react-router-dom";
 import SideBar from "./SideBar/SideBar";
+import Pagination from "./Pagination/Pagination";
 const ReactDesign = () => {
   return (
     <>
@@ -21,6 +22,7 @@ const ReactDesign = () => {
           <Route path="/AllRegulations" element={<AllRegulations />} />
           <Route path="/ReactDesign" element={<ReactDesignComponent />} />
           <Route path="/sideBar" element={<SideBar />} />
+          <Route path="/Pagination" element={<Pagination />} />
         </Routes>
       </Router>
     </>

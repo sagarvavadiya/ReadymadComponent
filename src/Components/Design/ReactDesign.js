@@ -13,6 +13,9 @@ const ReactDesign = () => {
       <Link to={"/AllRegulations"}>
         <button className="btn btn-outline-dark">ReactDataTable</button>
       </Link>
+      <Link to={"/Pagination"}>
+        <button className="btn btn-outline-dark">Pagination</button>
+      </Link>
     </div>
   );
 };

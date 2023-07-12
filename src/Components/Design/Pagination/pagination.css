@@ -1,0 +1,30 @@
+.pageSpotBox{ 
+    display: flex;
+    width: 25rem;
+    justify-content: space-around;
+}
+
+.displayNone{
+    display: none;
+}
+
+.squre{
+    -webkit-text-security: square;
+}
+
+.test{
+    color: red;
+}
+
+.pageElement{
+    font-size: 2rem;
+}
+
+.PageBox{
+    height: 40vw;
+}
+.paginationDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
