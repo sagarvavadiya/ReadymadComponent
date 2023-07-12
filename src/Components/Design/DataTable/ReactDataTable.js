@@ -332,7 +332,6 @@ const TableContainer = ({
     setFilters({ ...filters, [e.target.name]: e.target.value });
   };
 
-  console.log(filters);
   const handleExport = (selectedFlatRowsData) => {
     exportToExcel(selectedFlatRowsData.map((i) => i.original));
   };
@@ -344,16 +343,66 @@ const TableContainer = ({
     }, 2000);
   }, []);
 
-  //   useEffect(() => {
-  //     let filterData = data;
-  //     setTabledata(
-  //       data?.filter((i) => {
-  //         i.regId.includes(filters?.regId);
-  //       })
-  //     );
+  useEffect(() => {
+    setTabledata([]);
+    let regIdFilterWord = filters?.regId.length > 0 ? filters?.regId : "";
+    let regShortNameFilterWord =
+      filters?.regShortName.length > 0 ? filters?.regShortName : "";
+    let cfrRefFilterWord = filters?.cfrRef.length > 0 ? filters?.cfrRef : "";
+    let regLongNameFilterWord =
+      filters?.regLongName.length > 0 ? filters?.regLongName : "";
+    let regDescriptionFilterWord =
+      filters?.regDescription.length > 0 ? filters?.regDescription : "";
+    let regUrlFilterWord = filters?.regUrl.length > 0 ? filters?.regUrl : "";
+    let regComplianceGuideUrlFilterWord =
+      filters?.regComplianceGuideUrl.length > 0
+        ? filters?.regComplianceGuideUrl
+        : "";
+    let regRelatedLawFilterWord =
+      filters?.regRelatedLaw.length > 0 ? filters?.regRelatedLaw : "";
+    let regAuthoringRegulatorFilterWord =
+      filters?.regAuthoringRegulator.length > 0
+        ? filters?.regAuthoringRegulator
+        : "";
 
-  //     setTabledata();
-  //   }, [filters]);
+    let filterKeyWords = [
+      { regId: regIdFilterWord },
+      { regShortName: regShortNameFilterWord },
+      { cfrRef: cfrRefFilterWord },
+      { regLongName: regLongNameFilterWord },
+      { regDescription: regDescriptionFilterWord },
+      { regUrl: regUrlFilterWord },
+      { regComplianceGuideUrl: regComplianceGuideUrlFilterWord },
+      { regRelatedLaw: regRelatedLawFilterWord },
+      { regAuthoringRegulator: regAuthoringRegulatorFilterWord },
+    ];
+
+    function filterObjectsByKeywords(objectArray, filterKeywords) {
+      return objectArray.filter((object) => {
+        for (let filterObj of filterKeywords) {
+          const field = Object.keys(filterObj)[0];
+          const keyword = filterObj[field];
+
+          if (
+            !String(object[field]).toLowerCase().includes(keyword.toLowerCase())
+          ) {
+            return false;
+          }
+        }
+        return true;
+      });
+    }
+
+    // Filter objects based on keywords
+    const filteredObjects = filterObjectsByKeywords(
+      TabledataInfo,
+      filterKeyWords
+    );
+
+    // Output the filtered objects
+    setTabledata(filteredObjects);
+  }, [filters]);
+
   const theme = createMuiTheme({
     overrides: {
       MuiFilledInput: {
@@ -496,7 +545,10 @@ const TableContainer = ({
                               style={{ width: "70%" }}
                               PopperComponent={PopperMy}
                               options={[]}
-                              value={""}
+                              value={filters[column.id]}
+                              onDoubleClick={() =>
+                                setFilters({ ...filters, [column.id]: "" })
+                              }
                               classes={{
                                 option: classes.option,
                               }}
