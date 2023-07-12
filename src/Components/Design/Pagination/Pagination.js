@@ -42,6 +42,22 @@ const Pagination = () => {
 
       <div className="paginationDiv">
         <div className="pageSpotBox">
+          <div>
+            <span className="pointer" onClick={() => setCurrentPage(1)}>
+              ⏪
+            </span>
+            <span
+              className="pointer"
+              onClick={() =>
+                setCurrentPage(
+                  currentPage === 1 ? currentPage : currentPage - 1
+                )
+              }
+            >
+              ◀️
+            </span>
+          </div>
+
           {pageNumbers.map((pageNumber) => (
             <div
               key={pageNumber}
@@ -79,6 +95,28 @@ const Pagination = () => {
               )}
             </div>
           ))}
+          <div>
+            <span
+              className="pointer"
+              onClick={() =>
+                setCurrentPage(
+                  currentPage === pageNumbers[pageNumbers.length - 1]
+                    ? pageNumbers[pageNumbers.length - 1]
+                    : currentPage + 1
+                )
+              }
+            >
+              ▶️
+            </span>
+            <span
+              className="pointer"
+              onClick={() =>
+                setCurrentPage(pageNumbers[pageNumbers.length - 1])
+              }
+            >
+              ⏩
+            </span>
+          </div>
         </div>
       </div>
     </div>
