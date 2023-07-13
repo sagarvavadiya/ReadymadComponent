@@ -1,0 +1,81 @@
+.dropdownBody{
+  cursor: pointer;
+  position: relative;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.DropdownTitle{
+  border: 2px solid;
+  width: 20rem;
+  border-radius: 8px;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.dropdownContent{
+  position: absolute;
+}
+.manuTitle { 
+  width: 14rem;
+  border: #0087fd solid 1px;
+  cursor: pointer;
+  position: relative;
+  left: 6rem;
+  background-color: aliceblue;
+  min-height: 2rem;
+  display: grid;
+}
+.manuBox,
+.submanuBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .submanuBox{
+  min-width: 12rem;
+} */
+.submanuTitle {
+  width: 14rem;
+  border: #008aff solid 1px;
+  cursor: pointer;
+  position: relative;
+  left: 25px;
+  background: #c0e2ff;
+  min-height: 2rem;
+  display: grid;
+ 
+}
+.submanuChildTitle {
+  width: 12rem;
+  border: #008aff solid 1px;
+  cursor: pointer;
+  background-color: #81c4fd;
+  min-height: 2rem;
+  display: grid;
+}
+ 
+.rotate{
+  transform: rotate(90deg) !important; 
+}
+
+.rotateSubmanu{
+  transform: rotate(90deg) !important; 
+}
+
+.checkboxProperty{
+  margin: 0 1rem;
+}
+.submanuChildBox{
+  position: relative;
+    left: 4rem;
+}
+.arrowIcon{
+  font-size: 1.4rem;
+}
+
+.hide{
+  display: none;
+}

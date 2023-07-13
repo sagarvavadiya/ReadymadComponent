@@ -7,8 +7,8 @@ const ReactDesign = () => {
       <Link to={"/muigrid"}>
         <button className="btn btn-outline-dark">muigrid</button>
       </Link>
-      <Link to={"/sidebar"}>
-        <button className="btn btn-outline-dark">sideBar</button>
+      <Link to={"/DropDown"}>
+        <button className="btn btn-outline-dark">DropDown</button>
       </Link>
       <Link to={"/AllRegulations"}>
         <button className="btn btn-outline-dark">ReactDataTable</button>

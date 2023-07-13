@@ -1,1 +1,1 @@
-console.log(3 | 0);
+console.log(typeof +"123");
