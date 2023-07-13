@@ -7,7 +7,6 @@ const SideBar = () => {
   const [openChildSubmenu, setOpenChildSubmenu] = useState([]);
   const [MenuItems, setMenuItems] = useState(MenuItemsData);
 
-  console.log(openSubmenu, openChildSubmenu);
   const test = () => {
     setOpenSubmenu(openSubmenu.filter((i) => i != 1));
   };
@@ -30,8 +29,8 @@ const SideBar = () => {
   };
 
   const manageCheckStateForSubManu = (e) => {
-    const { name, checked, data } = e.target;
-    console.log(name, checked, data);
+    const { name, checked, id } = e.target;
+    console.log("e.target==========>", name, checked, id);
     // if (name === "allSelect") {
     //   let tempUser = MenuItems.map((item) => {
     //     return { ...item, isChecked: checked };
@@ -111,12 +110,7 @@ const SideBar = () => {
                               <input
                                 type="checkbox"
                                 name={submanu.title}
-                                data={{
-                                  name: submanu.title,
-                                  checked: submanu.isChecked,
-                                  index: index,
-                                }}
-                                id=""
+                                id={index}
                                 onChange={manageCheckStateForSubManu}
                                 checked={submanu.isChecked}
                                 onClick={() => console.log(submanu)}
