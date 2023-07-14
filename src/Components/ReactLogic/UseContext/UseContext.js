@@ -5,11 +5,12 @@ export const StoreContext = createContext();
 const UseContext = () => {
   const [store, setStore] = useState("i use context api");
   const [coins, setCoins] = useState(0);
-  const Plus = () => {
-    setCoins(coins + 1);
+
+  const Plus = (s) => {
+    setCoins(coins + s);
   };
-  const Minus = () => {
-    setCoins(coins - 1);
+  const Minus = (s) => {
+    setCoins(coins - s);
   };
 
   return (
@@ -24,4 +25,4 @@ const UseContext = () => {
   );
 };
 
-export default UseContext;
+export default React.memo(UseContext);

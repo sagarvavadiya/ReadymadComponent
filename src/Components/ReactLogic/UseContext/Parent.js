@@ -2,6 +2,7 @@ import React from "react";
 import Child from "./Child";
 
 const Parent = () => {
+  console.log("Parent");
   return (
     <>
       <h1>Parent</h1>
@@ -10,4 +11,4 @@ const Parent = () => {
   );
 };
 
-export default Parent;
+export default React.memo(Parent);

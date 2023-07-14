@@ -64,11 +64,13 @@ const DropDown = () => {
 
   return (
     <>
-      <div className="dropdownBody">
+      <div
+        className="dropdownBody"
+        onBlur={() => setOpenDropDown(!openDropDown)}
+      >
         <div
           className="DropdownTitle"
           onClick={() => setOpenDropDown(!openDropDown)}
-          onBlur={() => setOpenDropDown(!openDropDown)}
         >
           <span>Dropdown</span>
           <span className={`arrowIcon ${openDropDown ? "rotate" : ""}`}>
