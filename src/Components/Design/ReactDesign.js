@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const ReactDesign = () => {
   return (
-    <div>
+    <div className="styleFont">
       <Link to={"/muigrid"}>
         <button className="btn btn-outline-dark">muigrid</button>
       </Link>

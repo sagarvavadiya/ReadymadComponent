@@ -1,1 +1,2 @@
-console.log(typeof +"123");
+
+read : https://youtu.be/QHGhp9yG4uw

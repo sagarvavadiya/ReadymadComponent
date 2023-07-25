@@ -16,4 +16,11 @@ code {
   overflow: visible !important;
 }
 
+@font-face {
+  font-family: myFirstFont;
+  src: url("./Style/arianaVioletaFont/ArianaVioleta.ttf");
+}
+.styleFont{
+  font-family: myFirstFont !important;
+  }
 

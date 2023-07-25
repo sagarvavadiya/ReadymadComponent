@@ -1,27 +1,22 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useReducer, useState } from "react";
 import Parent from "./Parent";
+import { counterReducer } from "./ContextStore/counterReducer";
+import { initialState } from "./ContextStore/store";
+// export const StoreContext = createContext();
 
-export const StoreContext = createContext();
+// Create the Context
+export const CounterContext = createContext();
+
 const UseContext = () => {
-  const [store, setStore] = useState("i use context api");
-  const [coins, setCoins] = useState(0);
-
-  const Plus = (s) => {
-    setCoins(coins + s);
-  };
-  const Minus = (s) => {
-    setCoins(coins - s);
-  };
+  const [state, dispatch] = useReducer(counterReducer, initialState);
 
   return (
-    <StoreContext.Provider
-      value={{ store, setStore, setCoins, coins, Minus, Plus }}
-    >
+    <CounterContext.Provider value={{ state, dispatch }}>
       <h1>
-        i'm store {store}, I have {coins} Coins
+        i'm store {state.store}, I have {state.coins} Coins
       </h1>
       <Parent />
-    </StoreContext.Provider>
+    </CounterContext.Provider>
   );
 };
 

@@ -23,10 +23,9 @@ const Firebase = () => {
     <>
       Firebase
       <button onClick={getData}>Get data</button>
-        <button onClick={addData}>Add data</button>
-        <button onClick={updateData}>Update data</button>
-        
-        <button onClick={deleteData}>Delete data</button>
+      <button onClick={addData}>Add data</button>
+      <button onClick={updateData}>Update data</button>
+      <button onClick={deleteData}>Delete data</button>
     </>
   );
 };
