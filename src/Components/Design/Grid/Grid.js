@@ -53,76 +53,15 @@ export default function GridStyle() {
         className="elementBox"
         style={{ margin: "4vw 0", width: "50%", border: "red solid" }}
       >
-        {/* <Box sx={{ flexGrow: 1, border: "red solid" }}>
-        <Grid
-          container
-          spacing={{ xs: 1, md: 1 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
-          sx={{ justifyContent: "space-between" }}
-        >
-          <Grid item xs={12} sm={12} md={4}>
-            <Item>
-              <img
-                style={{ width: "100%" }}
-                src="https://images.pexels.com/photos/13446290/pexels-photo-13446290.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-                alt=""
-              />{" "}
-            </Item>
-          </Grid>
-
-          <Grid item xs={12} sm={12} md={4}>
-            <Item>
-              <img
-                style={{ width: "100%" }}
-                src="https://images.pexels.com/photos/13446290/pexels-photo-13446290.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-                alt=""
-              />{" "}
-            </Item>
-          </Grid>
-        </Grid>
-      </Box> */}
         {data.map((i) => {
           return <div className="element">{i}</div>;
         })}
-
-        {/* {data2.map((i) => {
-        return <div className="element">{i}</div>;
-      })} */}
       </div>
 
       <div
         className="elementBox"
         style={{ margin: "4vw 0", width: "50%", border: "red solid" }}
       >
-        {/* <Box sx={{ flexGrow: 1, border: "red solid" }}>
-        <Grid
-          container
-          spacing={{ xs: 1, md: 1 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
-          sx={{ justifyContent: "space-between" }}
-        >
-          <Grid item xs={12} sm={12} md={4}>
-            <Item>
-              <img
-                style={{ width: "100%" }}
-                src="https://images.pexels.com/photos/13446290/pexels-photo-13446290.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-                alt=""
-              />{" "}
-            </Item>
-          </Grid>
-
-          <Grid item xs={12} sm={12} md={4}>
-            <Item>
-              <img
-                style={{ width: "100%" }}
-                src="https://images.pexels.com/photos/13446290/pexels-photo-13446290.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-                alt=""
-              />{" "}
-            </Item>
-          </Grid>
-        </Grid>
-      </Box> */}
-
         {data2.map((i) => {
           return <div className="element2">{counter}</div>;
         })}

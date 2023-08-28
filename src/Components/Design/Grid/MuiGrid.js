@@ -7,6 +7,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Chip from "@mui/material/Chip";
 import { Data } from "./Data";
 import { Link } from "react-router-dom";
+import GridStyle from "./Grid";
 const Index = () => {
   let columns = [
     {
@@ -156,6 +157,8 @@ const Index = () => {
           pageSize={10}
         />
       </div>
+
+      <GridStyle />
     </>
   );
 };
