@@ -48,6 +48,9 @@ const ReactLogicShortcut = () => {
           <Link to={"/FirebaseAuth"}>
             <button className="btn btn-outline-dark ">FirebaseAuth</button>
           </Link>
+          <Link to={"/ScreenShotPage"}>
+            <button className="btn btn-outline-dark ">ScreenShotPage</button>
+          </Link>
         </div>
       </Suspense>
       {/* )} */}

@@ -7,7 +7,7 @@ const TestComponent = () => {
     setValue(Number(localStorage.getItem("test")) + 1);
   }, [window.localStorage.getItem("test")]);
 
-  return <>werw</>;
+  return <> </>;
 };
 
 export default TestComponent;

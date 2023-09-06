@@ -15,7 +15,37 @@ code {
 .th{
   overflow: visible !important;
 }
+.displayNone{
+  display: none;
+}
+.screenshotGridBox{
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: start;
+}
 
+.screenshotGridBox2{ 
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.Flex{
+display: flex; 
+}
+.FlexCol{
+  display: flex; 
+  flex-direction: column;
+  }
+
+.FlexBetween{
+    display: flex; 
+    justify-content: space-between;
+    }
 @font-face {
   font-family: myFirstFont;
   src: url("./Style/arianaVioletaFont/ArianaVioleta.ttf");

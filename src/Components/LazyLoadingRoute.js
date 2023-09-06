@@ -26,6 +26,7 @@ const LazyLoadingRoute = () => {
   const Firebase = React.lazy(() => import("./ReactLogic/Firebase/Firebase"));
   const ReactDesignComponent = React.lazy(() => import("./Design/ReactDesign"));
   const MuiGrid = React.lazy(() => import("./Design/Grid/MuiGrid"));
+  const ScreenShotPage = React.lazy(() => import("./ReactLogic/Screenshot/ScreenShotPage"));
   // const FirebaseAuth = React.lazy(() =>
   //   import("./ReactLogic/Firebase/UserAuthentication/FirebaseAuth")
   // );
@@ -60,6 +61,7 @@ const LazyLoadingRoute = () => {
             <Route path="/ReactDesign" element={<ReactDesignComponent />} />
             <Route path="/DropDown" element={<DropDown />} />
             <Route path="/Pagination" element={<Pagination />} />
+            <Route path="/ScreenShotPage" element={<ScreenShotPage />} />
           </Routes>
         </Router>
       </Suspense>
